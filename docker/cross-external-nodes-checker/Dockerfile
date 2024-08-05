@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:experimental
 FROM debian:bookworm-slim as builder
 
-RUN apt-get update && apt-get install -y curl clang openssl libssl-dev gcc g++ \
-    pkg-config build-essential libclang-dev && \
+RUN apt-get update && apt-get install -y curl build-essential clang openssl libssl-dev gcc g++ \
+    pkg-config libclang-dev && \
     rm -rf /var/lib/apt/lists/*
 
 ENV RUSTUP_HOME=/usr/local/rustup \
