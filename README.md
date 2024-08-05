@@ -1,4 +1,4 @@
-# Tranching: A ZK Rollup For Scaling Ethereum
+# Tranching Protocol: A ZK Rollup For Scaling Ethereum
 
 [Website](https://tidalchain.com/)
 
