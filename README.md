@@ -1,6 +1,6 @@
 # Tranching: A ZK Rollup For Scaling Ethereum
 
-[!Logo](https://tidalchain.com/)
+[Website](https://tidalchain.com/)
 
 Tranching Protocol is a layer 2 rollup that uses zero-knowledge proofs to scale Ethereum without compromising on security or
 decentralization. Since it's EVM compatible (Solidity/Vyper), 99% of Ethereum projects can redeploy without refactoring
@@ -25,9 +25,6 @@ The following questions will be answered by the following resources:
 - [Security policy](SECURITY.md)
 - [Contribution policy](CONTRIBUTING.md)
 
-## License
-
-micro is distributed under the terms of either
 
 - Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or <http://www.apache.org/licenses/LICENSE-2.0>)
 - MIT license ([LICENSE-MIT](LICENSE-MIT) or <http://opensource.org/licenses/MIT>)
