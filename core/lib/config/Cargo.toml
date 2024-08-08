@@ -1,0 +1,16 @@
+[package]
+name = "micro_config"
+version = "0.1.0"
+edition = "2018"
+authors = []
+homepage = "https://www.zkamoeba.com/"
+repository = "https://github.com/tidalchain/micro"
+license = "MIT OR Apache-2.0"
+keywords = ["blockchain", "micro"]
+categories = ["cryptography"]
+
+[dependencies]
+micro_basic_types = { path = "../../lib/basic_types" }
+
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }

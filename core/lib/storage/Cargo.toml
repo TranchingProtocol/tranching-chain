@@ -1,0 +1,23 @@
+[package]
+name = "micro_storage"
+version = "0.1.0"
+edition = "2021"
+authors = []
+homepage = "https://www.zkamoeba.com/"
+repository = "https://github.com/tidalchain/micro"
+license = "MIT OR Apache-2.0"
+keywords = ["blockchain", "micro"]
+categories = ["cryptography"]
+
+[dependencies]
+vise = { git = "https://github.com/tidalchain/vise.git", branch = "main" }
+
+num_cpus = "1.13"
+once_cell = "1.18.0"
+rocksdb = { version = "0.21.0", default-features = false, features = [
+    "snappy",
+] }
+tracing = "0.1"
+
+[dev-dependencies]
+tempfile = "3.0.2"

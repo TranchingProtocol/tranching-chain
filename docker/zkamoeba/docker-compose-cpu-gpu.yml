@@ -1,0 +1,73 @@
+version: "3.2"
+services:
+
+  witness-generator-basic:
+    image: "zkamoeba/witness-generator:latest"
+    restart: always
+    volumes:
+      - ./setup-data:/usr/src/setup-data
+    env_file:
+      - ./testnet.env
+    command: --round=basic_circuits
+
+  witness-generator-leaf:
+    image: "zkamoeba/witness-generator:latest"
+    restart: always
+    volumes:
+      - ./setup-data:/usr/src/setup-data
+    env_file:
+      - ./testnet.env
+    command: --round=leaf_aggregation
+
+  witness-generator-node:
+    image: "zkamoeba/witness-generator:latest"
+    restart: always
+    volumes:
+      - ./setup-data:/usr/src/setup-data
+    env_file:
+      - ./testnet.env
+    command: --round=node_aggregation
+
+  witness-generator-scheduler:
+    image: "zkamoeba/witness-generator:latest"
+    restart: always
+    volumes:
+      - ./setup-data:/usr/src/setup-data
+    env_file:
+      - ./testnet.env
+    command: --round=scheduler
+
+  witness-vector-generator:
+    image: "zkamoeba/witness-vector-generator:latest"
+    restart: always
+    volumes:
+      - ./setup-data:/usr/src/setup-data
+    env_file:
+      - ./testnet.env
+    deploy:
+      mode: replicated
+      replicas: 5
+
+  proof-fri-compressor:
+    image: "zkamoeba/proof-fri-compressor:latest"
+    restart: always
+    volumes:
+      - ./setup-data:/usr/src/setup-data
+    env_file:
+      - ./testnet.env
+
+  prover-gpu-fri:
+    image: "zkamoeba/prover-gpu-fri:latest"
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./setup-data:/usr/src/setup-data
+    env_file:
+      - ./testnet.env

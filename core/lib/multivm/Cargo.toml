@@ -1,0 +1,37 @@
+[package]
+name = "multivm"
+version = "0.1.0"
+edition = "2018"
+authors = []
+homepage = "https://www.zkamoeba.com/"
+repository = "https://github.com/tidalchain/micro"
+license = "MIT OR Apache-2.0"
+keywords = ["blockchain", "micro"]
+categories = ["cryptography"]
+
+[dependencies]
+zk_evm_1_4_0 = { package = "zk_evm", git = "https://github.com/tidalchain/micro-zk_evm.git", branch = "v1.4.0" }
+zk_evm_1_3_3 = { package = "zk_evm", git = "https://github.com/tidalchain/micro-zk_evm.git", branch = "v1.3.3" }
+zk_evm_1_3_1 = { package = "zk_evm", git = "https://github.com/tidalchain/micro-zk_evm.git", branch = "v1.3.1-without-lifetime" }
+
+micro_types = { path = "../types" }
+micro_state = { path = "../state" }
+micro_contracts = { path = "../contracts" }
+micro_utils = { path = "../utils" }
+micro_system_constants = { path = "../constants" }
+
+
+anyhow = "1.0"
+hex = "0.4"
+itertools = "0.10"
+once_cell = "1.7"
+thiserror = "1.0"
+tracing = "0.1"
+vise = { git = "https://github.com/tidalchain/vise.git", branch = "main" }
+
+
+[dev-dependencies]
+tokio = { version = "1", features = ["time"] }
+micro_test_account = { path = "../test_account" }
+ethabi = "18.0.0"
+micro_eth_signer = { path = "../eth_signer" }

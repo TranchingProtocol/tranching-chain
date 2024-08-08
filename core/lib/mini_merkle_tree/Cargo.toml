@@ -1,0 +1,24 @@
+[package]
+name = "micro_mini_merkle_tree"
+version = "0.1.0"
+edition = "2021"
+authors = []
+homepage = "https://www.zkamoeba.com/"
+repository = "https://github.com/tidalchain/micro"
+license = "MIT OR Apache-2.0"
+keywords = ["blockchain", "micro"]
+categories = ["cryptography"]
+
+[dependencies]
+micro_crypto = { path = "../../lib/crypto" }
+micro_basic_types = { path = "../basic_types" }
+
+once_cell = "1.7"
+
+[dev-dependencies]
+criterion = "0.4.0"
+
+[[bench]]
+name = "tree"
+harness = false
+path = "benches/tree.rs"

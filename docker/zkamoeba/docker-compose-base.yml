@@ -1,0 +1,59 @@
+version: "3.2"
+services:
+  postgres:
+    image: "postgres:14"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./volumes/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    healthcheck:
+      test: ["CMD", "pg_isready"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+    command: postgres -c max_connections=500
+
+  ext-node:
+    image: "zkamoeba/external-node:latest"
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "3060:3060"
+      - "3061:3061"
+    volumes:
+      - ./db/ext-node:/db/ext-node
+    env_file:
+      - ./testnet.env
+      - ./custom.env
+
+  object-store:
+    image: "zkamoeba/object_store:latest"
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./artifacts:/artifacts
+
+  gateway:
+    image: "zkamoeba/prover-fri-gateway:latest"
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - ./testnet.env
+      - ./custom.env
+  
+  task-apply:
+    image: "zkamoeba/prover-fri-task-apply:latest"
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - ./testnet.env
+      - ./custom.env

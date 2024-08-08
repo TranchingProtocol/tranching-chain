@@ -1,0 +1,78 @@
+# micro chain parameters
+
+[chain.eth]
+# Name of the used Ethereum network
+network = "localhost"
+# Name of current micro network
+# Used for Sentry environment
+micro_network = "localhost"
+# ID of current micro network treated as ETH network ID.
+# Used to distinguish micro from other Web3-capable networks.
+micro_network_id = 270
+
+[chain.state_keeper]
+fee_account_addr = "0xde03a0B5963f75f1C8485B355fF6D30f3093BDE7"
+
+# Denotes the amount of slots for transactions in the block.
+transaction_slots = 100
+
+max_allowed_l2_tx_gas_limit = 4000000000
+block_commit_deadline_ms = 3600000
+miniblock_commit_deadline_ms = 1000
+miniblock_seal_queue_capacity = 10
+# Max gas that can used to include single block in aggregated operation
+max_single_tx_gas = 9_000_000_000
+
+# Configuration option for block to be sealed in case
+# it takes more percentage of the max block capacity than this value.
+close_block_at_geometry_percentage = 0.95
+# Configuration option for block to be sealed in case
+# it takes more percentage of the max block capacity than this value.
+close_block_at_eth_params_percentage = 0.95
+
+# Configuration option for block to be sealed in case
+# it takes more percentage of the max block capacity than this value.
+close_block_at_gas_percentage = 0.95
+
+# Configuration option for tx to be rejected in case
+# it takes more percentage of the block capacity than this value.
+reject_tx_at_geometry_percentage = 0.95
+# Configuration option for block to be sealed in case
+# it takes more percentage of the max block capacity than this value.
+reject_tx_at_eth_params_percentage = 0.95
+
+# Configuration option for block to be sealed in case
+# it takes more percentage of the max block gas capacity than this value.
+reject_tx_at_gas_percentage = 0.95
+
+# The price the operator spends on 1 gas of computation in wei.
+fair_l2_gas_price = 80000000
+
+# Max number of computational gas that validation step is allowed to take.
+validation_computational_gas_limit = 300000
+save_call_traces = true
+
+virtual_blocks_interval = 1
+virtual_blocks_per_miniblock = 1
+
+# WARNING! This slows down the statekeeper, forcing mempool to upload to GCS
+# It is meant as a validation flag to be used in STAGING only.
+# This variable should not be set to true in any customer facing environment.
+upload_witness_inputs_to_gcs = false
+
+[chain.operations_manager]
+# Sleep time when there is no new input data
+delay_interval = 100
+
+[chain.mempool]
+delay_interval = 100
+sync_interval_ms = 10
+sync_batch_size = 1000
+capacity = 10_000_000
+stuck_tx_timeout = 86400 # 1 day in seconds
+remove_stuck_txs = true
+
+[chain.circuit_breaker]
+sync_interval_ms = 180000
+http_req_max_retry_number = 5
+http_req_retry_interval_sec = 2

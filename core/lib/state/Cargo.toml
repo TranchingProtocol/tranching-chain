@@ -1,0 +1,27 @@
+[package]
+name = "micro_state"
+version = "0.1.0"
+edition = "2021"
+authors = []
+homepage = "https://www.zkamoeba.com/"
+repository = "https://github.com/tidalchain/micro"
+license = "MIT OR Apache-2.0"
+keywords = ["blockchain", "micro"]
+categories = ["cryptography"]
+
+[dependencies]
+vise = { git = "https://github.com/tidalchain/vise.git", branch = "main" }
+micro_dal = { path = "../dal" }
+micro_types = { path = "../types" }
+micro_utils = { path = "../utils" }
+micro_storage = { path = "../storage" }
+
+anyhow = "1.0"
+mini-moka = "0.10.0"
+tokio = { version = "1", features = ["rt"] }
+tracing = "0.1"
+itertools = "0.10.3"
+
+[dev-dependencies]
+rand = "0.8.5"
+tempfile = "3.0.2"

@@ -1,0 +1,6 @@
+[submodule "etc/system-contracts"]
+	path = etc/system-contracts
+	url = https://github.com/tidalchain/micro-system-contracts.git
+[submodule "contracts"]
+	path = contracts
+	url = https://github.com/tidalchain/micro-contracts.git
