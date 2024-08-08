@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 check_fmt () {
     if ! cargo fmt -- --check; then
         echo -e "${RED}Commit error!${NC}"
-        echo "Please format the code via 'cargo fmt', cannot commit unformatted code"
+        echo "Please format the code via 'cargo fmt', cannot commit unformatted source code"
         exit 1
     fi
 }

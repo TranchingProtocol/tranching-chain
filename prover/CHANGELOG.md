@@ -41,7 +41,6 @@
 * **prover-fri:** Update setup loading for node agg circuit ([#323](https://github.com/tidalchain/micro/issues/323)) ([d1034b0](https://github.com/tidalchain/micro/commit/d1034b05754219b603508ef79c114d908c94c1e9))
 * **prover-logging:** tasks_allowed_to_finish set to true for 1 off jobs ([#227](https://github.com/tidalchain/micro/issues/227)) ([0fac66f](https://github.com/tidalchain/micro/commit/0fac66f5ff86cc801ea0bb6f9272cb397cd03a95))
 * Sync protocol version between consensus and server blocks ([#568](https://github.com/tidalchain/micro/issues/568)) ([56776f9](https://github.com/tidalchain/micro/commit/56776f929f547b1a91c5b70f89e87ef7dc25c65a))
-* Update prover to use the correct storage oracle ([#446](https://github.com/tidalchain/micro/issues/446)) ([835dd82](https://github.com/tidalchain/micro/commit/835dd828ef5610a446ec8c456e4df1def0e213ab))
 
 ## [9.1.0](https://github.com/tidalchain/micro/compare/prover-v9.0.0...prover-v9.1.0) (2023-12-05)
 

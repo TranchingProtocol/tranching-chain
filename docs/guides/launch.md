@@ -15,6 +15,8 @@ Setup:
 ```
 zk # installs and builds zk itself
 zk init
+or
+zk init setup-env-ignore
 ```
 
 If you face any other problems with the `zk init` command, go to the [Troubleshooting](#Troubleshooting) section at the

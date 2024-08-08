@@ -160,7 +160,7 @@ Verify the `rust` installation:
 
 ```bash
 rustc --version
-rustc 1.xx.y (xxxxxx 20xx-yy-zz) # Output may vary depending on actual version of rust
+rustc 1.xx.y (1.78.0 20xx-yy-zz) # Output may vary depending on actual version of rust
 ```
 
 If you are using MacOS with ARM processor (e.g. M1/M2), make sure that you use an `aarch64` toolchain. For example, when

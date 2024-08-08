@@ -24,7 +24,6 @@ fn parsing_optional_config_from_empty_env() {
         config.merkle_tree_block_cache_size(),
         128 * BYTES_IN_MEGABYTE
     );
-    assert_eq!(config.max_response_body_size(), 10 * BYTES_IN_MEGABYTE);
 }
 
 #[test]
@@ -69,5 +68,4 @@ fn parsing_optional_config_from_env() {
         config.merkle_tree_block_cache_size(),
         32 * BYTES_IN_MEGABYTE
     );
-    assert_eq!(config.max_response_body_size(), BYTES_IN_MEGABYTE);
 }

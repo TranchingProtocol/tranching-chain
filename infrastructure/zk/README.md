@@ -23,7 +23,7 @@ structure as an example.
 ### Extending an existing subcommand
 
 Simply add the needed functionality to the corresponding `.ts` file and add your subcommand to the existing
-`const command` via `.command(...)` API. Don't forget to notify the team to rebuild `zk` upon merge.
+`const command` via `.command(...)` API.
 
 ### Building changes
 
