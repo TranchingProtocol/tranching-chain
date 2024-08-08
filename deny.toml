@@ -7,7 +7,7 @@ unmaintained = "warn"
 yanked = "warn"
 notice = "warn"
 ignore = [
-    "RUSTSEC-2023-0018",
+    "RUSTSEC-2024-0018",
 ]
 
 [licenses]

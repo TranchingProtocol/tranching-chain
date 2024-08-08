@@ -23,10 +23,6 @@ and the repo's maintainers will review the PR.
 [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
 for guidance how to work with PRs created from a fork.
 
-## Licenses
-
-If you contribute to this project, your contributions will be made to the project under both Apache 2.0 and the MIT
-license.
 
 ## Resources
 

@@ -75,7 +75,7 @@ services:
       - --execution-endpoint=http://geth:8551
       - --accept-terms-of-use
       - --jwt-secret=/execution/jwtsecret
-      - --suggested-fee-recipient=0x8a91dc2d28b689474298d91899f0c1baf62cb85b
+      - --suggested-fee-recipient=0x7f76906737ad434C51EA180726a8c16e84959896
       - --minimum-peers-per-subnet=0
       - --enable-debug-rpc-endpoints
     ports:

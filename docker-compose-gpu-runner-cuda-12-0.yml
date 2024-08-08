@@ -1,12 +1,12 @@
 version: '3.2'
 services:
   geth:
-    image: "zkamoeba/geth:latest"
+    image: "tranching/geth:latest"
     environment:
       - PLUGIN_CONFIG
 
   zk:
-    image: zkamoeba/zk-environment:cuda-12-0-latest
+    image: tranching/zk-environment:cuda-12-0-latest
     depends_on:
       - geth
       - postgres
@@ -21,8 +21,8 @@ services:
     environment:
       - CACHE_DIR=/usr/src/cache
       - SCCACHE_CACHE_SIZE=50g
-      - SCCACHE_GCS_BUCKET=zkamoeba-infra-sccache-storage
-      - SCCACHE_GCS_SERVICE_ACCOUNT=gha-ci-runners@zkamoeba-infra.iam.gserviceaccount.com
+      - SCCACHE_GCS_BUCKET=tranching-infra-sccache-storage
+      - SCCACHE_GCS_SERVICE_ACCOUNT=gha-ci-runners@tranching-infra.iam.gserviceaccount.com
       - SCCACHE_ERROR_LOG=/tmp/sccache_log.txt
       - SCCACHE_GCS_RW_MODE=READ_WRITE
       - CI=1

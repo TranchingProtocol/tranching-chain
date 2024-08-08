@@ -16,7 +16,7 @@
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-22.11",
+        "ref": "nixos-22.12",
         "repo": "nixpkgs",
         "type": "github"
       }

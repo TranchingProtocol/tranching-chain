@@ -26,7 +26,6 @@
     "local-prep": "yarn workspace local-setup-preparation",
     "l1-contracts": "yarn workspace l1-micro-contracts",
     "l2-contracts": "yarn workspace l2-micro-contracts",
-    "revert-test": "yarn workspace revert-test",
     "upgrade-test": "yarn workspace upgrade-test",
     "ts-integration": "yarn workspace ts-integration",
     "zk": "yarn workspace zk"

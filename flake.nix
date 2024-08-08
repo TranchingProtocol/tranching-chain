@@ -1,7 +1,7 @@
 {
     description = "micro development shell";
     inputs = {
-        stable.url = "github:NixOS/nixpkgs/nixos-22.11";
+        stable.url = "github:NixOS/nixpkgs/nixos-22.12";
     };
     outputs = {self, stable}: {
         packages.x86_64-linux.default =

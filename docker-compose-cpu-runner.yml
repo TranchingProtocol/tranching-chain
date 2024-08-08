@@ -1,12 +1,12 @@
 version: '3.2'
 services:
   geth:
-    image: "zkamoeba/geth:latest"
+    image: "tranching/geth:latest"
     environment:
       - PLUGIN_CONFIG
 
   zk:
-    image: "zkamoeba/zk-environment:latest2.0-lightweight-nightly"
+    image: "tranching/zk-environment:latest2.0-lightweight-nightly"
     depends_on:
       - geth
       - postgres
