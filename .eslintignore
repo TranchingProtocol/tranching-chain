@@ -5,6 +5,7 @@ build/
 dist/
 volumes/
 bellman-cuda
+.DS_Store
 
 # Ignore contract submodules
 contracts

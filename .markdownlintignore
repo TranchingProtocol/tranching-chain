@@ -1,6 +1,6 @@
 # Ignore submodule
 bellman-cuda
-
+.DS_Store
 
 # Ignore Github configuration markdowns
 .github

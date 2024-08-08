@@ -7,6 +7,7 @@
 .vscode
 .DS_Store
 *.bak
+tests/*
 node_modules
 *.log
 target

@@ -13,6 +13,7 @@
 !artifacts
 !keys
 keys/setup
+.DS_Store
 !bin/
 !db/
 !backups/
